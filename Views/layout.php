@@ -38,7 +38,7 @@
                 <ul class="nav nav-tabs">
                     <li role="presentation" class="active"><a href="/">Welcome</a></li>
                     <li role="presentation" ><a href="#">Entertaintment</a></li>
-                    <li role="presentation" ><a href="#">Accomodation</a></li>
+                    <li role="presentation" ><a href="/accomodation">Accomodation</a></li>
                     <li role="presentation" ><a href="#">Transport</a></li>
                     <li role="presentation" ><a href="#">Colleges</a></li>
                     <li role="presentation" ><a href="/contact">Contact</a></li>
@@ -106,7 +106,7 @@
                 </div>
 
                 <div class="col-lg-3  col-md-3 col-sm-6 col-xs-12 ">
-                    <h3> Lorem Ipsum </h3>
+                    <h3> Social again </h3>
                     <ul>
                         <li>
                             <div class="input-append newsletter-box text-center">
