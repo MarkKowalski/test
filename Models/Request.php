@@ -22,38 +22,19 @@ class Request {
 
         if (!empty($uri) && strpos($uri, "public") !== 0)
         {
-            // strip parameters
             $uri = current(explode("?", $uri));
-            // separate ctrl and action
             $params = explode("/", $uri);
 
-            // if controller only
             if (count($params) >= 1 && !empty($params[0]))
             {
                 $this->controller = $params[0];
             }
-            // + action
             if (count($params) >= 2)
             {
-                //preserve action name
-                $this->orgin_action = $params[1];
-                $action = '';
-                // form single name
-                $items = explode("-", $params[1]);
-                if (count($items) > 1)
-                {
-                    foreach ($items as $item)
-                    {
-                        $action .= ucfirst($item);
-                    }
+                    if($params[1] != ''){
+                       $this->action = $params[1];
 
-                    $action = lcfirst($action);
-                }
-                else
-                {
-                    $action = $params[1];
-                }
-                $this->action = $action;
+                    }      
             }
             // third url value
             if (count($params) == 3)

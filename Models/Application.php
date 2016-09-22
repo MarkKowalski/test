@@ -1,5 +1,6 @@
 <?php
 include('request.php');
+include('view.php');
 class Application {
 
     public $request = null;
@@ -18,6 +19,7 @@ class Application {
     public function start()
     {
         $this->request = new Request();
+
 
                 // Connect to the database using mysqli
         $conn = new mysqli($this->dbConfig['host'], $this->dbConfig['user'], $this->dbConfig['password'], $this->dbConfig['dbName']);

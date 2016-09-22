@@ -1,5 +1,5 @@
 <?php
-include('models/view.php');
+
 class IndexController extends View{
     public $request = null;
     public $layout = array();

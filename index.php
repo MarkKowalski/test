@@ -32,5 +32,5 @@ spl_autoload_register('__autoLoadClass');
 require_once 'Models/Application.php';
 //start app
 $application = new Application();
-
+//echo('hhh');
 $application->start();

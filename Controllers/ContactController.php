@@ -1,6 +1,6 @@
 <?php
-include('models/view.php');
-class ContactController extends View{
+
+class ContactController{
     public $request = null;
     public $layout = array();
     
