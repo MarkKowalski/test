@@ -1,5 +1,68 @@
+.tile{
+    
+}
+.right-api{
+    
+}
 .full {
     width: 100%;	
+}
+#nav-form{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+a:focus, .btn:focus {
+  outline: none;
+}
+.btn-outline-primary {
+    background-image: none;
+    background-color: #fff;
+
+    color: #0275d8;
+}
+.btn-outline-secondary {
+      background-image: none;
+    background-color: #fff;
+
+    color: #ccc;
+}
+
+.btn-outline-success {
+     background-image: none;
+    background-color: #fff;
+    margin-left:4px;
+    color: #5cb85c;
+}
+.btn-outline-success:hover{
+    color: #5cb85c;
+    border-color: #5cb85c;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 4px rgba(92, 184, 92, 0.6);
+    
+}
+.btn-outline-info {
+    background-image: none;
+    background-color: #fff;
+
+    color: #5bc0de;
+}
+
+.btn-outline-warning {
+    background-image: none;
+    background-color: #fff;
+
+    color: #f0ad4e;
+}
+
+.btn-outline-danger {
+    background-image: none;
+    background-color: #fff;
+margin-left:4px;
+    color: #d9534f;
+}
+.btn-outline-danger:hover{
+    color: #d9534f;
+    border-color: #d9534f;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 4px rgba(217, 83, 79, 0.6);
 }
 .gap {
 	height: 30px;
@@ -12,7 +75,7 @@
 	height: auto;
 	padding-bottom: 30px;
 	position: relative;
-	width: 100%;
+	width: auto;
 	border-bottom: 1px solid #CCCCCC;
 	border-top: 1px solid #DDDDDD;
 }

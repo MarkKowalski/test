@@ -6,52 +6,107 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>Student</title>
+                <script src="/public/js/jquery2.2.1.js"></script> 
+        <script src="/public/js/jquery-ui.min.js"></script> 
+         <script src="/public/js/jquery.slides.min.js"></script>
+ <script src="/public/js/bootstrap.min.js"></script>
+       
 
-        <link rel="stylesheet" href="/public/css/bootstrap.min.css">
+ 
 
         
-        <script src="/public/js/jquery2.2.1.js"></script> 
-        <script src="/public/js/jquery-ui.min.js"></script> 
+<link href="../Public/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
         <link rel="stylesheet" href="/public/css/jquery-ui.min.css">
-      
+             <link rel="stylesheet" href="/public/css/bootstrap.min.css">
         <link rel="stylesheet" href="/public/css/main.css">
        
     </head>
     <body>
-        <div class="container">
-            <div class="jumbotron">
-                <ul class="nav nav-pills navbar-text navbar-right">
-                    <li role="presentation" class="active"><a href="#">Login</a></li>
-                    <li role="presentation"><a href="#">Signup</a></li>
-                
-                </ul>
-                <h4>Hello, student!</h4>
-                
-                <p>...</p>
-                <p>
-                    <a class="btn btn-primary btn-sm" href="#" role="button">Learn more</a>
-                </p>
-                
-                
+       <div class="container">
+            <div class="row">
+                <div class="jumbotron">
+                    
+                    <h4>Hello, student!</h4>
+
+                    <p>...</p>
+                    <p>
+                        <a class="btn btn-primary btn-sm" href="#" role="button">Learn more</a>
+                    </p>
+
+
+                </div>
             </div>
-            <nav>
-                <ul class="nav nav-tabs">
-                    <li role="presentation" class="active"><a href="/">Welcome</a></li>
-                    <li role="presentation" ><a href="#">Entertaintment</a></li>
-                    <li role="presentation" ><a href="/accomodation">Accomodation</a></li>
-                    <li role="presentation" ><a href="#">Transport</a></li>
-                    <li role="presentation" ><a href="#">Colleges</a></li>
-                    <li role="presentation" ><a href="/contact">Contact</a></li>
+           <div class="row">
+               <div class="col-xs-12 col-sm-12 col-md-8 col-lg-7">
+               
+           <nav role="navigation">
+               
+    <ul class="nav nav-tabs" role="tablist">
+    
+        <li role="presentation" class="active"><a href="" role="tab" data-toggle="tab">Welcome</a></li>
+        <li role="presentation"><a href="" role="tab" data-toggle="tab">Entertaintment</a></li>
+        <li role="presentation"><a href="" role="tab" data-toggle="tab">Accomodation</a></li>
+        <li role="presentation"><a href="" role="tab" data-toggle="tab">Transport</a></li>
+        <li role="presentation"><a href="" role="tab" data-toggle="tab">Colleges</a></li>
+        <li role="presentation"><a href="" role="tab" data-toggle="tab">Contact</a></li>
+       
+
+        
+
+    
+
+    </ul>
+
+
+</nav>
+      </div>  
+               
+               <div class="col-xs-12 col-sm-12 col-md-4 col-lg-5">
+               
+               <nav role="navigation">
+                   
+                   <ul class="nav nav-pills pull-right">
+                   
                     
-                        <form class="navbar-form navbar-right" role="search">
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Search">
-                            </div>
-                            <button type="submit" class="btn btn-default">Submit</button>
-                        </form>
-                    
-                </ul>
-            </nav>
+
+        <li class="" role="presentation"><button type="button"  class="btn btn-outline-danger">Signup</button></li>
+
+        <li class="" role="presentation"><button type="button" class="btn btn-outline-success">Login</button></li>
+                   <li class="">
+<form id="nav-form" class="navbar-form navbar-right">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+    </li>
+                   </ul>
+                   
+                   
+                   </nav>
+               
+               
+               
+               
+               
+               </div>
+           
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               </div>
             <div class="row">
                 <div class="col-lg-12">
                     Here could go the breadcrumbs
@@ -60,23 +115,19 @@
             </div>   
 
             <div class="row">
-                <div class="col-lg-12 content-left">
+                
                     <?php echo $content ?>
                   
 
-                </div>
-                <div class="col-lg-3 content-left">
-                    
-
-                </div>
-                <div class="col-lg-9 content-right">
-                  
-                </div>
+              
+            
             </div>
-       <footer>
-    <div class="footer" id="footer">
-        <div class="container">
-            <div class="row">
+                
+       <footer  class="row footer" id="footer">
+           
+
+  
+    
                 <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
                     <h3> Site Info </h3>
                     <ul>
@@ -123,20 +174,18 @@
                         <li> <a href="#"> <i class="fa fa-youtube">   </i> </a> </li>
                     </ul>
                 </div>
-            </div>
+       
             <!--/.row--> 
-        </div>
+        
         <!--/.container--> 
-    </div>
+
     <!--/.footer-->
 
     <!--/.footer-bottom--> 
 </footer>
         </div>
-        <!-- jQuery 2.1.4 -->
-        <script src="/public/js/bootstrap.min.js"></script>
-        <script src="/public/js/jquery.slides.min.js"></script>
-
+   
+       
     </body>
 </html>
 
