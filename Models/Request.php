@@ -16,7 +16,8 @@ class Request {
     {
        
         $this->method = $_SERVER['REQUEST_METHOD'];
-        
+         $this->setPost();
+
 
         $uri = ltrim($_SERVER['REQUEST_URI'], "/");
 
@@ -44,8 +45,16 @@ class Request {
                 $this->get['id'] = $params[2];
             }
 
-
         }
     }   
+        private function setPost()
+    {
+        $this->post = filter_input_array(INPUT_POST);
+    }
+
+        public function isPost()
+    {
+        return $this->method === 'POST' ? true : false;
+    }
 
 }

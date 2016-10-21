@@ -1,6 +1,8 @@
 <?php
 include('request.php');
+include('response.php');
 include('view.php');
+include('user.php');
 class Application {
 
     public $request = null;
@@ -21,7 +23,7 @@ class Application {
         $this->request = new Request();
 
 
-                // Connect to the database using mysqli
+                // Connect to the database
         $conn = new mysqli($this->dbConfig['host'], $this->dbConfig['user'], $this->dbConfig['password'], $this->dbConfig['dbName']);
     
         // get controller name
