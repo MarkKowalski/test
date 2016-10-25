@@ -10,7 +10,7 @@ class Application {
     private $template = 'layout';
     private $dbConfig = array(
         'host'      =>  'localhost',
-        'dbName'    =>  'student',
+        'dbName'    =>  'test',
         'user'      =>  'root',
         'password'  =>  ''
     );

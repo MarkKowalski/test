@@ -15,7 +15,7 @@ class Response {
             
 			header('Location: '.$url);
 			
-			die(' ');
+			die('');
 		}
 	}
     

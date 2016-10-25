@@ -1,3 +1,5 @@
+<?php session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,7 +29,7 @@
     <div class="container">
         <div class="row">
             <div class="jumbotron">
-                <h4>Hello, student!</h4>
+                <h4>Hello, <?php if(!empty($_SESSION['email'])){ echo $_SESSION['email'];}else{echo 'student.';}  ?> </h4>
                 <p>
                     <a class="btn btn-primary btn-sm" href="#" role="button">Learn more</a>
                 </p>
@@ -77,6 +79,9 @@
                                 SignUp
                             </a>
                         </li>
+               <li>
+               
+               </li>
                         <li>
                             <a type="button" class="btn btn-outline-success" href="/user/login">
                                 <span class="glyphicon glyphicon-log-in"></span>
