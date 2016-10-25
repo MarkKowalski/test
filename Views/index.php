@@ -17,7 +17,7 @@
                 </div>
                 <div class="col-sm-6 col-md-4">
                     <div class="thumbnail">
-                        <a href="/colleges"><img src="../Public/Images/courses.jpg" alt="..." height="200" width="auto"></a>
+                        <a href="/courses"><img src="../Public/Images/courses.jpg" alt="..." height="200" width="auto"></a>
                         <div class="caption">
                             <h3>Select Course</h3>
                             <p>...</p>
@@ -27,7 +27,7 @@
                 </div>
                 <div class="col-sm-6 col-md-4">
                     <div class="thumbnail">
-                        <a href="/colleges"><img src="../Public/Images/accomodation.png" alt="..." height="200" width="auto"></a>
+                        <a href="/accomodation"><img src="../Public/Images/accomodation.png" alt="..." height="200" width="auto"></a>
                         <div class="caption">
                             <h3>Select Accomodation</h3>
                             <p>...</p>
@@ -37,6 +37,39 @@
 
                 </div>
             </div>
+            <div class="row">
+                <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                        
+                            <a href="/colleges"><img src="../Public/Images/colleges.jpeg" alt="..." height="200" width="auto"></a>
+                            <div class="caption">
+                                <h3>Select College</h3>
+                                <p>...</p>
+
+                            </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                        <a href="/courses"><img src="../Public/Images/courses.jpg" alt="..." height="200" width="auto"></a>
+                        <div class="caption">
+                            <h3>Select Course</h3>
+                            <p>...</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                        <a href="/accomodation"><img src="../Public/Images/accomodation.png" alt="..." height="200" width="auto"></a>
+                        <div class="caption">
+                            <h3>Select Accomodation</h3>
+                            <p>...</p>
+
+                        </div>
+                    </div>
+
+</div>            </div>
 
 
 
