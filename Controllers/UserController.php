@@ -196,6 +196,16 @@ class UserController extends View{
     return $this->view->render('login', $data=null);
         
   }
+    
+    public function logout(){
+        session_start();
+        session_unset();
+
+        // destroy the session
+        session_destroy(); 
+        Response::redirect('/user/login');
+        
+    }
   
   
  

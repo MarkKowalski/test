@@ -73,21 +73,29 @@
       </ul>
   
            <ul class="nav navbar-nav navbar-right">
-                        <li>
+               <?php if(!empty($_SESSION['email'])):?>
+               <li>
+                <a type="button" class="btn btn-outline-success" href="/user/logout">
+                    <span class="glyphicon glyphicon-log-out"></span>
+                    LogOut
+                </a>
+                   
+               </li>
+               <?php else: ?>               
+               <li>
                             <a type="button" class="btn btn-outline-danger" href="/user/signup">
                                 <span class="glyphicon glyphicon-user"></span>
                                 SignUp
                             </a>
                         </li>
-               <li>
-               
-               </li>
+              
                         <li>
                             <a type="button" class="btn btn-outline-success" href="/user/login">
                                 <span class="glyphicon glyphicon-log-in"></span>
                                 LogIn
                             </a>
                         </li>
+               <?php endif; ?>
                     
                     </ul>
         
