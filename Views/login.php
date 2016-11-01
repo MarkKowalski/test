@@ -1,6 +1,9 @@
 <div class="col-xs-9">
     <h3>Log In</h3>
     <div><?php if(!empty($data['loginError'])) echo $data['loginError'] ?></div>
+    <div><?php if(!empty($data['userConfirmation'])) echo $data['userConfirmation'] ?></div>
+    <div><?php if(!empty($data['verificationMsg'])) echo $data['verificationMsg'] ?></div>
+    
     <form method="post" action="/user/login">
         <div class="form-group">
             <label for="email">Email address:</label><span><?php if(!empty($data['emailError'])) echo $data['emailError']; ?></span>
@@ -14,4 +17,5 @@
     </form>
 </div>
 <div class="col-xs-3">
-    ddd</div>
+    Here could go some FAQ
+</div>

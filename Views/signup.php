@@ -1,12 +1,16 @@
 <!--
-Fix user errors
+Fix user errors notifications
 
 -->
 
 
 <div class="col-xs-9">
     <h3>Sign Up</h3>
-    <div><? php if(!empty($data['userError'])) echo $data['userError']; ?></div>
+ 
+    
+
+    <div><?php if(!empty($data['userError'])) echo $data['userError']; ?></div>
+    <div><?php if(!empty($data['verificationMsg'])) echo $data['verificationMsg'] ?></div>
     <form method="post" action="/user/signup">
         <div class="form-group">
             <label for="email">Email address:</label><span><?php if(!empty($data['emailError'])) echo $data['emailError']; ?></span>
@@ -25,4 +29,5 @@ Fix user errors
     </form>
 </div>
 <div class="col-xs-3">
-    ddd</div>
+    Here could go some FAQ
+</div>

@@ -1,6 +1,6 @@
 <div class="col-lg-12 content-left">
     <h1>Erasmus student</h1>
-    <p>Welcome to your erasmus portal. Please make yourself comfortable with the options available for you. </p>
+    <p>Welcome to your erasmus portal. Please make yourself comfortable with the options available for you. Welcome to your erasmus portal. Please make yourself comfortable with the options available for you. Welcome to your erasmus portal. Please make yourself comfortable with the options available for you. Welcome to your erasmus portal. Please make yourself comfortable with the options available for you. </p>
     <div class="row">
         <div class="col-xs-8 col-sm-6 col-md-8 col-lg-9 tile">
             <div class="row">
@@ -76,7 +76,10 @@
 
         </div>
         <div class="col-xs-4 col-sm-6 col-md-4 col-lg-3 right-api">
-            <p>Here map</p>
+            <h4>Here you can use a map to access your location.</h4>
+            <div>
+                <img src="../Public/Images/mapofeurope.png" width="100%" height="auto" alt="Map of Europe" />
+            </div>
 
 
         </div>

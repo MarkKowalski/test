@@ -58,13 +58,37 @@ class UserController extends View{
                     $results = $conn->query($sql);
                     if($results->num_rows == 0){
                         $passwordHash = md5($password);
-                        $sql = "INSERT INTO users (email, passwordHash) VALUES ('$email', '$passwordHash')";
+                        $verifyToken = md5(date(DATE_RSS) . rand(0, 1000));
+                        //$verifyToken = 'rrr';
+                        $sql = "INSERT INTO users (email, passwordHash, name, isVerified, verifyToken) VALUES ('$email', '$passwordHash', null, null, '$verifyToken')";
                         
                         
                         if ($conn->query($sql) === TRUE) {
-                            //$data = null;
-                            $data['userConfirmation'] = 'Email with confirmation link has been sent to your email. Please confirm your account before Log In.';
-                            return $this->view->render('login', $data);
+                            // send email on success of DB insert
+                            
+                           
+                            
+                            //$to = $data['email'];
+                            $to = "root@localhost.com";
+                            $subject = "Erasmus confirmation email.";
+                           
+                            $msg = "Please click following link to confirm sign up process.\n http://test.dev/user/confirmation?token=$verifyToken&email=$email";
+                            $header = "From: info@test.dev";                    
+                            $sentEmail = mail($to, $subject, $msg, $header);
+                            // check if the email was sent
+                            if($sentEmail){
+                                $data['userConfirmation'] = 'Email with confirmation link has been sent to your email. Please confirm your account before Log In.';
+                                return $this->view->render('login', $data);
+                            }else{
+                                $data['userConfirmation'] = "There was a problem with sending an Email.";
+                                return $this->view->render('signup', $data);
+                            }
+                            
+                            
+                            
+                            
+                            
+                            
                         } else {
                             //////evaluate and remove the message
                             echo "Error: " . $sql . "<br>" . $conn->error;
@@ -179,7 +203,8 @@ class UserController extends View{
               
                 
             }else{
-                return $this->view->render('login', $data);
+                 Response::redirect('/user/login');
+                //return $this->view->render('login', $data);
             }
             
             
@@ -205,6 +230,55 @@ class UserController extends View{
         session_destroy(); 
         Response::redirect('/user/login');
         
+    }
+    
+    public function confirmation(){
+          $conn = new mysqli($this->dbConfig['host'], $this->dbConfig['user'], $this->dbConfig['password'], $this->dbConfig['dbName']);
+          // Create connection
+// Check connection
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        }
+      
+        //check token validity with user's one saved in DB
+        if(isset($_GET['token']) && !empty($_GET['token']) && isset($_GET['email']) && !empty($_GET['email'])){
+            
+            $token = $this->clean_input($_GET['token']);
+            $email = $this->clean_input($_GET['email']);
+                        
+            $sql = "SELECT  verifyToken FROM users WHERE email = '$email'";
+            
+            $results = $conn->query($sql);
+            if($results->num_rows == 1){
+               
+                $row = $results->fetch_assoc();
+               
+            
+               
+                if($token == $row['verifyToken']){
+                    $sql = "UPDATE users SET isVerified = 1, verifyToken = null WHERE email = '$email'";
+                      //$sql = "INSERT INTO users (email, passwordHash, name, isVerified, verifyToken) VALUES ('$email', '$passwordHash', null, null, '$verifyToken')";
+                      if($conn->query($sql)){echo 'true';}else{echo 'false';}
+                     if ($conn->query($sql) === TRUE) {
+                         $data['verificationMsg'] = 'Verification completed.';
+                          Response::redirect('/user/login');
+                         //return $this->view->render('login', $data);
+                     }else{
+                         $data['verificationMsg'] = "Veryfication process failed on clearing is verified.";
+                         return $this->view->render('signup', $data);
+                     }
+                    
+                    
+                }
+            }else{
+                echo 'outside results';
+                $data['verificationMsg'] = "Veryfication process failed.";
+                return $this->view->render('signup', $data);
+            }
+            
+            
+        }
+             $conn->close();
     }
   
   
